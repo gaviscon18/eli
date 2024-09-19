@@ -1,0 +1,98 @@
+body {
+    background-color: #CD7399 !important;
+    
+}
+
+#lulu{
+    color: #CD7399;
+}
+
+
+#heart-container {
+    position: fixed; /* Sabit bir konumda kalmasını sağlar */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Tüm ekran genişliği */
+    height: 100vh; /* Tüm ekran yüksekliği */
+    pointer-events: none; /* Kalplerin tıklanabilir olmasını engeller */
+    z-index: 9999; /* Diğer tüm öğelerin üzerinde kalmasını sağlar */
+    overflow: hidden; /* Kalplerin ekran dışına çıkmasını önler */
+}
+
+.heart {
+    position: absolute;
+    font-size: 36px; /* Kalp boyutu */
+    color: red; /* Kalp rengi */
+    pointer-events: none; /* Kalplerin üzerine tıklanabilir olmasını engeller */
+    animation: fall 2s linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px); /* Kalplerin başlangıç yüksekliği */
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh); /* Kalplerin ekranın altına düşmesi */
+        opacity: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    #eli {
+        width: 35%;
+        /* ekran genişliği 768px'den büyük olduğunda (bilgisayar boyutu) %50 genişlik */
+        margin-top: 5%;
+        margin-left: 84%;
+        margin-bottom: 8%;
+    }
+
+    #ked {
+        width: 52%;
+        margin-left: 24%;
+    }
+}
+
+@media (max-width: 767px) {
+    #eli {
+        width: 55%;
+        /* ekran genişliği 767px'den küçük olduğunda (telefon boyutu) %70 genişlik */
+        margin-top: 8%;
+        margin-bottom: 8%;
+    }
+
+    #ked1,#ked2,#ked3 {
+        width: 40%;
+        /* margin-bottom: 3%; */
+        /* margin-left: 30%; */
+
+        border-left: 10px solid #CD7399;
+
+    }
+
+    p {
+        font-size: 14.6px;
+        margin: 0 !important;
+    }
+
+    #pad {
+        margin-bottom: 3%;
+        padding-left: 0;
+    }
+
+    #pad3{
+        padding-left: 0;
+    }
+
+
+    #p1 {
+        padding-left: 1px;
+    }
+
+    #sonic {
+        width:25% ;
+    }
+
+    
+
+}
